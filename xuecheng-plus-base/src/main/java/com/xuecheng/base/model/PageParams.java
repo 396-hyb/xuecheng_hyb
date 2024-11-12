@@ -22,7 +22,7 @@ public class PageParams {
 
     //当前页码
     @ApiModelProperty(value = "当前页码")
-    public Long pageNO = 1L;
+    public Long pageNo = 1L;
 
     //每页记录数默认值
     @ApiModelProperty(value = "每页记录数默认值")
