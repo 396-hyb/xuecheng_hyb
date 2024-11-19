@@ -40,6 +40,7 @@
         <result column="one_orderby" property="orderby"/>
         <result column="one_courseId" property="courseId"/>
         <result column="one_coursePubId" property="coursePubId"/>
+        <result column="one_isPreview" property="isPreview"/>
         <collection property="teachPlanTreeNodes" ofType="com.xuecheng.content.model.dto.TeachplanDto">
             <id column="two_id" property="id"/>
             <result column="two_pname"      property="pname" />
@@ -51,6 +52,7 @@
             <result column="two_orderby"   property="orderby" />
             <result column="two_courseId"   property="courseId" />
             <result column="two_coursePubId"   property="coursePubId" />
+            <result column="two_isPreview" property="isPreview"/>
             <association property="teachplanMedia" javaType="com.xuecheng.content.model.po.TeachplanMedia">
                 <id column="teachplanMeidaId"   property="id" />
                 <result column="mediaFilename"   property="mediaFilename"/>
@@ -74,6 +76,7 @@
             t1.orderby        one_orderby,
             t1.course_id      one_courseId,
             t1.course_pub_id  one_coursePubId,
+            t1.is_preview     one_isPreview,
             t2.id             two_id,
             t2.pname          two_pname,
             t2.parentid       two_parentid,
@@ -84,6 +87,7 @@
             t2.orderby        two_orderby,
             t2.course_id      two_courseId,
             t2.course_pub_id  two_coursePubId,
+            t2.is_preview     two_isPreview,
             m1.media_fileName mediaFilename,
             m1.id teachplanMeidaId,
             m1.media_id mediaId
