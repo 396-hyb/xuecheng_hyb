@@ -50,7 +50,7 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
     TeachplanMediaMapper teachplanMediaMapper;
 
     @Override
-    public PageResult<CourseBase> queryCourseBaseList(PageParams pageParams, QueryCourseParamsDto queryCourseParamsDto) {
+    public PageResult<CourseBase> queryCourseBaseList(Long companyId, PageParams pageParams, QueryCourseParamsDto queryCourseParamsDto) {
 
 
         //分页查询
@@ -171,7 +171,7 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         CourseCategory stName = courseCategoryMapper.selectById(courseBase.getSt());
         CourseCategory mtName = courseCategoryMapper.selectById((courseBase.getMt()));
         courseBaseInfoDto.setStName(stName.getName());
-        courseBaseInfoDto.setStName(mtName.getName());
+        courseBaseInfoDto.setMtName(mtName.getName());
 
         return courseBaseInfoDto;
     }

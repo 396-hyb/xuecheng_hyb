@@ -32,8 +32,8 @@ public class CourseBaseInfoServiceTests {
         PageParams pageParams = new PageParams();
         pageParams.setPageNo(1L);//页码
         pageParams.setPageSize(3L);//每页记录数
-
-        PageResult<CourseBase> pageResult = courseBaseInfoService.queryCourseBaseList(pageParams, queryCourseParamsDto);
+        Long companyId = 1232134L; //造的假数据
+        PageResult<CourseBase> pageResult = courseBaseInfoService.queryCourseBaseList(companyId, pageParams, queryCourseParamsDto);
         System.out.println(pageResult);
     }
 }

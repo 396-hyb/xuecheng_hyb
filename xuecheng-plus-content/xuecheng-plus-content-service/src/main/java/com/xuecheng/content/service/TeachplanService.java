@@ -1,7 +1,9 @@
 package com.xuecheng.content.service;
 
+import com.xuecheng.content.model.dto.BindTeachplanMediaDto;
 import com.xuecheng.content.model.dto.SaveTeachplanDto;
 import com.xuecheng.content.model.dto.TeachplanDto;
+import com.xuecheng.content.model.po.TeachplanMedia;
 
 import java.util.List;
 
@@ -43,4 +45,18 @@ public interface TeachplanService {
      * @param teachplanId
      */
     void moveupTeachplan(Long teachplanId);
+
+    /**
+     * 教学计划绑定媒资
+     * @param bindTeachplanMediaDto
+     * @return
+     */
+    public TeachplanMedia associationMedia(BindTeachplanMediaDto bindTeachplanMediaDto);
+
+    /**
+     * 解除教学计划绑定的媒资
+     * @param teachplanId
+     * @param mediaId
+     */
+    void deleteAssociationMedia(Long teachplanId, String mediaId);
 }
