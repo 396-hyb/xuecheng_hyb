@@ -6,9 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 /**
- * @author Mr.M
+ * @author Administrator
  * @version 1.0
- * @description TODO
  * @date 2022/10/25 9:14
  */
 @Slf4j
